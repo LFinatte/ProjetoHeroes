@@ -1,7 +1,17 @@
 <h1>{{title}}</h1>
 
-<!-- faz com que apareça as informações dos herois -->
-<app-heroes></app-heroes>
+<!-- link para a pagina/rota heroes -->
+<nav>
+    <a routerLink="/dashboard">Dashboard</a>
+    <a routerLink="/heroes">Heroes</a>
+</nav>
+
+<!-- rota q faz com que apareça as informações dos herois -->
+<router-outlet></router-outlet>
 
 <!-- faz com que apareça as mensagens-->
 <app-messages></app-messages>
+
+<!-- faz com que apareça o dashboard-->
+<app-dashboard></app-dashboard>
+
