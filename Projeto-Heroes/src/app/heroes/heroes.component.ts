@@ -14,11 +14,6 @@ export class HeroesComponent implements OnInit {
 // acessa o service
   heroes: Hero[] = [];
 
-/* Antes do array, estava dessa forma, busando as informações do mock
-heroes = HEROES */
-
-  selectedHero?: Hero;
-
 //injeção do serviço para chamar o metodo
   constructor(private heroService: HeroService, private messageService: MessageService) {}
 
@@ -33,11 +28,6 @@ heroes = HEROES */
         .subscribe(heroes => this.heroes = heroes);
   }
 
-  onSelect(hero: Hero): void {
-    this.selectedHero = hero;
-  //sempre que um heroi for selecionado irá aparecer a mensagem
-    this.messageService.add(`HeroesComponent: Selected hero id=${hero.id}`);
-  }
 
 
 

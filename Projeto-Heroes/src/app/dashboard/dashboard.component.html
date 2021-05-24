@@ -2,8 +2,10 @@
 
 <div class="heroes-menu">
 
-<!-- for para mostrar nome dos herois -->
-  <a *ngFor="let hero of heroes">
+<!-- for para mostrar detalhe dos herois -->
+  <a *ngFor="let hero of heroes"
+    routerLink="/detail/{{hero.id}}">
     {{hero.name}}
   </a>
+
 </div>
